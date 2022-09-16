@@ -1,3 +1,35 @@
+:root {
+	/* Colors */
+	--clr-red-200: hsl(7, 99%, 70%);
+
+	--clr-yellow-400: hsl(51, 100%, 49%);
+
+	--clr-neutral-900: hsl(0, 0%, 0%);
+	--clr-neutral-700: hsl(212, 27%, 19%);
+	--clr-neutral-600: hsl(213, 9%, 39%);
+	--clr-neutral-500: hsl(232, 10%, 55%);
+	--clr-neutral-300: hsl(210, 4%, 67%);
+	--clr-neutral-100: hsl(0, 0%, 100%);
+
+	/* Typography */
+	--fc-footer: hsl(168, 34%, 41%);
+	--fc-photography: hsl(198, 62%, 26%);
+	--fc-graphic-design: hsl(167, 40%, 24%);
+
+	--ff-primary: 'Barlow', sans-serif;
+	--ff-accent: 'Fraunces', serif;
+	
+	--ff-heading: var(--ff-accent);
+	--ff-body: var(--ff-primary);
+
+	--fw-regular: 600;
+	--fw-semi-bold: 700;
+	--fw-bold: 900;
+
+	--fs-300: 1rem /* 16px */
+	--fs-400: 1.125rem; /* 18px */
+}
+
 /* CSS RESET */
 /* Box sizing rules */
 *,
