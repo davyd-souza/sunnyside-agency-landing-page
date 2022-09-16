@@ -8,7 +8,7 @@
 	--clr-neutral-700: hsl(212, 27%, 19%);
 	--clr-neutral-600: hsl(213, 9%, 39%);
 	--clr-neutral-500: hsl(232, 10%, 55%);
-	--clr-neutral-300: hsl(210, 4%, 67%);
+	--clr-neutral-400: hsl(210, 4%, 67%);
 	--clr-neutral-100: hsl(0, 0%, 100%);
 
 	/* Typography */
@@ -26,7 +26,7 @@
 	--fw-semi-bold: 700;
 	--fw-bold: 900;
 
-	--fs-300: 1rem /* 16px */
+	--fs-300: 1rem;	/* 16px */
 	--fs-400: 1.125rem; /* 18px */
 }
 
@@ -83,3 +83,54 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* UTILITY CLASSES */
+
+/* Layout */
+.visually-hidden {
+	position: absolute;
+	
+	width: 1px;
+	height: 1px;
+	
+	padding: 0;
+	margin: 1px;
+	
+	overflow: hidden;
+	
+	clip: rect(0, 0, 0 ,0);
+	
+	white-space: nowrap;
+	
+	border: 0;
+}
+
+
+/* Typography */
+/* Font Color */
+.text-neutral-900 { color: var(--clr-neutral-900); }
+.text-neutral-700 { color: var(--clr-neutral-700); }
+.text-neutral-600 { color: var(--clr-neutral-600); }
+.text-neutral-500 { color: var(--clr-neutral-500); }
+.text-neutral-400 { color: var(--clr-neutral-400); }
+.text-neutral-100 { color: var(--clr-neutral-100); }
+
+/* Font Weight */
+.fw-bold { font-weight: var(--fw-bold); }
+.fw-semi-bold { font-weight: var(--fw-semi-bold); }
+.fw-regular { font-weight: var(--fw-regular); }
+
+/* Font Family */
+.ff-heading  {font-family: var(--ff-heading); }
+.ff-body  {font-family: var(--ff-heading); }
+
+/* Font Size */
+.fs-300 { font-size: var(--fs-300); }
+.fs-400 { font-size: var(--fs-400); }
+
+
+/* Background */
+.bg-yellow-400 { background-color: var(--clr-yellow-400); }
+
+.bg-red-200 { background-color: var(--clr-red-200); }
