@@ -4,6 +4,8 @@
 
 	--clr-yellow-400: hsl(51, 100%, 49%);
 
+	--clr-green-200: hsl(167, 44%, 70%);
+
 	--clr-neutral-900: hsl(0, 0%, 0%);
 	--clr-neutral-700: hsl(212, 27%, 19%);
 	--clr-neutral-600: hsl(213, 9%, 39%);
@@ -180,3 +182,5 @@ body {
 .bg-yellow-400 { background-color: var(--clr-yellow-400); }
 
 .bg-red-200 { background-color: var(--clr-red-200); }
+
+.bg-green-200 { background-color: var(--clr-green-200); }
