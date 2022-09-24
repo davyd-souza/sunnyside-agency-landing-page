@@ -12,7 +12,7 @@
 	--clr-neutral-500: hsl(232, 10%, 55%);
 	--clr-neutral-400: hsl(210, 4%, 67%);
 	--clr-neutral-100: hsl(0, 0%, 100%);
-
+	
 	/* Typography */
 	--fc-footer: hsl(168, 34%, 41%);
 	--fc-photography: hsl(198, 62%, 26%);
@@ -108,6 +108,8 @@ body {
 	background-color: var(--clr-neutral-500);
 }
 
+
+
 /* Gallery Section */
 .gallery-imgs {
 	display: grid;
@@ -117,6 +119,48 @@ body {
 @media (min-width: 60rem) {
 	.gallery-imgs { grid-template-columns: repeat(4, 1fr);}
 }
+
+
+
+/* Footer */
+.primary-footer {
+	--logo-clr: var(--fc-footer);
+	display: grid;
+	gap: 3rem;
+}
+
+.primary-footer > * {	margin-inline: auto; }
+
+/* Footer Logo */
+.primary-footer__logo:is( :hover ) { 
+	--logo-clr: var(--clr-neutral-100);
+}
+
+/* Footer Navigation */
+.primary-footer__nav { --row-gap: 3.5rem; }
+
+.primary-footer__nav a {
+	color: var(--fc-footer);
+	text-decoration: none;
+}
+
+.primary-footer__nav a:is(
+	:hover, :focus-within
+) { color: var(--clr-neutral-100); }
+
+/* Footer Social List */
+.social-icon {
+	width: var(--size-500);
+	aspect-ratio: 1;
+
+	fill: var(--fc-footer);	
+}
+
+.social-icon:is(
+	:hover, :focus-within
+) { fill: var(--clr-neutral-100); }
+
+
 
 /* UTILITY CLASSES */
 
@@ -137,6 +181,11 @@ body {
 	white-space: nowrap;
 	
 	border: 0;
+}
+
+.row {
+	display: flex;
+	gap: var(--row-gap, 2rem);
 }
 
 /* Typography */
@@ -190,3 +239,9 @@ body {
 .bg-red-200 { background-color: var(--clr-red-200); }
 
 .bg-green-200 { background-color: var(--clr-green-200); }
+
+
+/* Spacing */
+.padding-block-800 { padding-block: var(--size-800)}
+
+.mx-auto { margin-inline: auto; }
