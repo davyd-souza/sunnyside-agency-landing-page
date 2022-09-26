@@ -7,8 +7,8 @@
 </h2>
 <p align="center">
   <a href="#tech">Technologies</a> •
-  <a href="#use">How to Use</a> •
   <a href="#objective">Objective</a> •
+  <a href="#use">How to Use</a> •
   <a href="#author">Author</a>
 </p>
 
@@ -35,7 +35,7 @@
 <ul>
 	<li>View the optimal layout for the site depending on their device's screen size</li>
 	<li>See hover states for all interactive elements on the page</li>
-
+</ul>
 
 
 <h2 id="use">ℹ️ How to Use </h2>
@@ -67,7 +67,7 @@ $ yarn dev
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   <a href="mailto:davyd.eduardo.souza@hotmail.com" target="_blank" alt="Outlook badge">
-    <img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white"/>
   </a>
   <a href="https://www.instagram.com/odeisouza/" target="_blank" alt="Instagram badge">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
