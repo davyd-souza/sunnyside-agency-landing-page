@@ -102,11 +102,119 @@ svg {
 }
 
 
-/* Header */
+/* GENERAL STYLING */
 body { 
 	font-family: var(--ff-primary);
-	background-color: var(--clr-neutral-500);
+	background-color: var(--clr-neutral-100);
 }
+
+p[data-width="narrow"] { max-width: 42ch; }
+p[data-opacity="600"] { opacity: 0.6; }
+
+
+/* About Section*/
+.about-img > img {	width: 100%; }
+
+.about-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* About Button */
+.btn::before {
+	transform: scaleX(0);
+	transform-origin: right;
+}
+
+.btn:hover::before {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+.btn::before {
+	content: " ";
+
+	display: block;
+	
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	inset: 12px 0 0 0;
+	
+	background: var(--btn-clr, var(--clr-neutral-500));
+	z-index: -1;
+	
+	transition: transform .3s ease;
+}
+
+.btn {
+	width: 7.5rem;
+
+	position: relative;
+
+	color: var(--clr-neutral-700);
+	text-decoration: none;
+}
+
+
+
+/* About Layout */
+.about-area:nth-child(1) { grid-area: one;}
+.about-area:nth-child(2) { grid-area: two;}
+.about-area:nth-child(3) { grid-area: three;}
+.about-area:nth-child(4) { grid-area: four;}
+
+.about { 
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-template-areas:
+		"one"
+		"two"
+		"three"
+		"four"
+}
+
+@media (min-width: 60em) {
+	.about {
+		grid-template-areas:
+		"two one"
+		"three four";
+	}
+}
+
+
+
+/* Services Section */
+.service {
+	display: grid;
+	align-items: end;
+
+	background-color: hsl(165, 48%, 75%);
+	background-image: url('./images/mobile/image-graphic-design.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	min-height: 35rem;
+	padding-block-end: var(--size-800);
+}
+
+.service:last-of-type {
+	background-color: hsl(197, 99%, 68%);
+	background-image: url('./images/mobile/image-photography.jpg');
+}
+
+@media (min-width: 46.875em) {
+	.services {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.service { background-image: url('./images/desktop/image-graphic-design.jpg'); }
+	
+	.service:last-of-type {	background-image: url('./images/desktop/image-photography.jpg'); }
+}
+
+.service-text { width: 70%; }
 
 
 
@@ -188,6 +296,9 @@ body {
 	gap: var(--row-gap, 2rem);
 }
 
+.flow > *:where(:not(:first-child)) { margin-top: var(--flow-spacer, 1rem); }
+
+
 /* Typography */
 /* Font Color */
 .text-neutral-900 { color: var(--clr-neutral-900); }
@@ -196,6 +307,9 @@ body {
 .text-neutral-500 { color: var(--clr-neutral-500); }
 .text-neutral-400 { color: var(--clr-neutral-400); }
 .text-neutral-100 { color: var(--clr-neutral-100); }
+
+.fc-photography { color: var(--fc-photography); }
+.fc-graphic-design { color: var(--fc-graphic-design); }
 
 /* Font Weight */
 .fw-bold { font-weight: var(--fw-bold); }
@@ -230,6 +344,13 @@ body {
 
 /* Text Position */
 .text-center { text-align: center; }
+.text-center p { margin-inline: auto; }
+
+@media(max-width: 60rem) {
+	.text-center-sm-only { text-align: center; }
+	.text-center-sm-only p { margin-inline: auto; }
+}
+
 .text-uppercase { text-transform: uppercase; }
 
 
@@ -242,6 +363,10 @@ body {
 
 
 /* Spacing */
-.padding-block-800 { padding-block: var(--size-800)}
+.padding-inline-600 { padding-inline: var(--size-600); }
+.padding-inline-800 { padding-inline: var(--size-800); }
+
+.padding-block-800 { padding-block: var(--size-800); }
 
 .mx-auto { margin-inline: auto; }
+@media(max-width: 60em) { .mx-auto-sm-only { margin-inline: auto;} }

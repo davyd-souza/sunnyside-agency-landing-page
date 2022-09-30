@@ -42,43 +42,80 @@
 
 	<main>
 		
-		<section>
-			<div class="even-columns">
+		<section class="about">
 
-				<img src="./images/image-transform.jpg" alt="a egg in a yellow background" />
-	
-				<div class="flow">
-					<h2 class="ff-accent text-center fs-secondary-heading fw-bold">Transform your brand</h2>
-					<p class="ff-primary text-center">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
-					<button class="btn | ff-accent fw-semi-bold text-uppercase" href="#">Learn More</button>
-				</div>
-				
-				<img src="./images/image-stand-out.jpg" alt="a pink wine glass in a pink background">
-				
-				<div class="flow">
-					<h2 class="ff-accent text-center fs-secondary-heading fw-bold">Stand out to the right audience</h2>
-					<p class="ff-primary text-center">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-					<button class="btn | ff-accent fw-semi-bold text-uppercase" href="#">Learn More</button>
-				</div>
-
-				<div>
-					<img src="./images/image-graphic-design.jpg" alt="cherries on a green background">
-					<h2 class="ff-accent text-center fs-secondary-heading fw-bold">Graphic design</h2>
-					<p class="ff-primary text-center fs-300">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
-				</div>
-
-				<div>
-					<img src="./images/image-photography.jpg" alt="orange on a blue background">
-					<h2 class="ff-accent text-center fs-secondary-heading fw-bold">Photography</h2>
-					<p class="ff-primary text-center">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
-				</div>
-
-
+			<div class="about-area about-img">
+				<img 
+					src="./images/image-transform.jpg"
+					alt="a egg in a yellow background"
+					srcset="./images/image-transform.jpg 800w,
+									./images/desktop/image-transform.jpg 1440w"
+				/>
 			</div>
+
+			<div class="about-area about-text | padding-inline-600 padding-block-800 text-center-sm-only flow text-neutral-700" style="--flow-spacer: 2rem">
+				<h2 class="ff-accent fs-secondary-heading fw-bold">
+					Transform your brand
+				</h2>
+				<p data-opacity="600">
+					We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+				</p>
+				<a class="btn | ff-accent fw-semi-bold text-uppercase mx-auto-sm-only" style="--btn-clr: var(--clr-yellow-400)" href="#">
+					Learn More
+				</a>
+			</div>
+			
+			<div class="about-area about-img">
+				<img 
+					src="./images/image-stand-out.jpg"
+					alt="a pink wine glass in a pink background"
+					srcset="./images/image-stand-out.jpg 800w,
+									./images/desktop/image-stand-out.jpg 1440w"
+				/>
+			</div>
+			
+			<div class="about-area about-text | padding-inline-600 padding-block-800 text-center-sm-only flow text-neutral-700" style="--flow-spacer: 2rem">
+				<h2 class="ff-accent fs-secondary-heading fw-bold">
+					Stand out to the right audience
+				</h2>
+				<p data-opacity="600">
+					Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+				</p>
+				<a class="btn | ff-accent fw-semi-bold text-uppercase mx-auto-sm-only" style="--btn-clr: var(--clr-red-200);" href="#">
+					Learn More
+				</a>
+			</div>
+
+		</section>
+
+		<section class="services">
+
+			<div class="service">
+				<div class="service-text | fc-graphic-design flow text-center mx-auto">
+					<h2 class="ff-accent fs-secondary-heading fw-bold">
+						Graphic design
+					</h2>
+					<p data-width="narrow">
+						Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+					</p>
+				</div>
+			</div>
+
+			<div class="service">
+				<div class="service-text | fc-photography flow text-center mx-auto">
+					<h2 class="ff-accent fs-secondary-heading fw-bold">
+						Photography
+					</h2>
+					<p data-width="narrow">
+						Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+					</p>
+				</div>
+			</div>
+
 		</section>
 
 		<section>
-			<div class="even-columns">
+			<div class="">
 
 				<h2 class="ff-accent text-center fw-semi-bold text-uppercase">Client Testimonials</h2>
 
@@ -145,7 +182,6 @@
 				<use xlink:href="./images/logo.svg#logo" />
 			</svg>
 		</a>
-
 
 		<nav class="primary-footer__nav" aria-label="footer">
 			<ul class="row" role="list">
