@@ -12,29 +12,51 @@
 </head>
 <body>
 
-	<header class="primary-header">
+	<header class="primary-header | text-neutral-100 padding-inline-600 padding-block-700">
 
-		<div class="nav-wrapper">
+		<div class="nav-wrapper | flex">
 			<a href="#">
 				<svg class="logo" alt="Sunnyside" width="200" height="40">
 					<use xlink:href="./images/logo.svg#logo" />
 				</svg>
 			</a>
 
-			<nav class="primary-nav">
-				<ul class="nav-list">
-					<li><a href="#">About</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Projects</a></li>
-					<li><a href="#">Contact</a></li>
+			<button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+				<span class="visually-hidden">Menu</span>
+			</button>
+
+			<nav>
+				<ul role="list" id="primary-nav" class="primary-nav" data-visible="false">
+					<li>
+						<a class="primary-nav__item" href="#about">
+							About
+						</a>
+					</li>
+					<li>
+						<a class="primary-nav__item" href="#services">
+							Services
+						</a>
+					</li>
+					<li>
+						<a class="primary-nav__item" href="#projects">
+							Projects
+						</a>
+					</li>
+					<li>
+						<a class="primary-nav__item accent | ff-accent text-uppercase" href="#footer">
+							Contact
+						</a>
+					</li>
 				</ul>
 			</nav>
 
 		</div>
 
-		<h1 class="ff-accent text-uppercase text-center fs-primary-heading fw-bold">We are creatives</h1>
+		<h1 class="ff-accent text-uppercase text-center fs-primary-heading fw-bold padding-block-900">
+			We are creatives
+		</h1>
 
-		<svg class="icon">
+		<svg class="arrow-down | mx-auto">
 			<use xlink:href="./images/icon-arrow-down.svg#icon-arrow-down" />
 		</svg>
 
@@ -42,7 +64,7 @@
 
 	<main>
 		
-		<section class="about">
+		<section class="about" id="about">
 
 			<div class="about-area about-img">
 				<img 
@@ -88,7 +110,7 @@
 
 		</section>
 
-		<section class="services">
+		<section class="services" id="services">
 
 			<div class="service">
 				<div class="service-text | fc-graphic-design flow text-center mx-auto">
@@ -156,7 +178,7 @@
 
 		</section>
 
-		<section class="gallery">
+		<section class="gallery" id="projects">
 			<div class="gallery-imgs">
 				<img 
 					src="./images/mobile/image-gallery-milk-bottles.jpg"
@@ -187,7 +209,7 @@
 
 	</main>
 
-	<footer class="primary-footer | bg-green-200 padding-block-800">
+	<footer id="footer" class="primary-footer | bg-green-200 padding-block-800">
 
 		<a class="primary-footer__logo" href="#" aria-label="home">
 			<svg class="logo" alt="Sunnyside" width="200" height="40">
@@ -196,14 +218,14 @@
 		</a>
 
 		<nav class="primary-footer__nav" aria-label="footer">
-			<ul class="row" role="list">
-				<li><a href="#">About</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Projects</a></li>
+			<ul class="flex" role="list">
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#projects">Projects</a></li>
 			</ul>
 		</nav>
 		
-		<ul class="social-list | row" role="list" aria-label="Social media links" role="list">
+		<ul class="social-list | flex" role="list" aria-label="Social media links" role="list">
 				<li>
 					<a aria-label="facebook" href="#">
 						<svg class="social-icon">
@@ -235,6 +257,6 @@
 		</ul>
 	</footer>
 
-	<script type="module" src="/main.js"></script>
+	<script type="module" src="./main.js"></script>
 </body>
 </html>

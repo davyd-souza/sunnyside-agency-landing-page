@@ -76,8 +76,8 @@ body {
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) { text-decoration-skip-ink: auto; }
+/* Revove decoration from anchor element */
+a { text-decoration: none; }
 
 /* Make images easier to work with */
 img,
@@ -109,7 +109,128 @@ body {
 }
 
 p[data-width="narrow"] { max-width: 42ch; }
-p[data-opacity="600"] { opacity: 0.6; }
+
+
+/* Header */
+.primary-header {
+	background-image: url('./images/image-header.jpg');
+	background-position: center bottom;
+	background-size: cover;
+}
+
+@media(min-width: 45em) {
+	.primary-header {
+		background-image: url('./images/desktop/image-header.jpg');
+	}
+}
+.nav-wrapper {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.arrow-down {
+	width: 2rem;
+	padding-block-end: 5rem;
+}
+
+.mobile-nav-toggle { display: none; }
+
+
+/* Header Navigation */
+.primary-nav {
+	display: flex;
+	gap: var(--flex-gap, 2rem);
+}
+
+.primary-nav__item { color: var(--clr-neutral-100); }
+
+.primary-nav__item.accent {
+	font-size: .9rem;
+
+	padding: 1.1em 2em;
+	margin-inline-start: .5rem;
+	
+	border-radius: 100vmax;
+	
+	background-color: hsl(200, 100%, 72%);
+}
+
+/* <560px */
+@media(max-width: 45em) {
+	.primary-nav {
+		display: none;
+
+		flex-direction: column;
+		align-items: center;
+
+		position: absolute;
+		z-index: 1000;
+		inset: 9rem var(--size-600) auto 20%;
+		
+		padding: 3rem;
+
+		background-color: var(--clr-neutral-100);
+	}
+
+	.primary-nav::before {
+		content: '';
+		
+		width: 0;
+		height: 0;
+
+		position: absolute;
+		inset: calc(1.7rem * -2) 0 0 calc(100% - 2.5rem);
+
+		border-right: 1.3rem solid var(--clr-neutral-100);
+		border-bottom: 1.7rem solid var(--clr-neutral-100);
+		border-left: 1.3rem solid transparent;
+		border-top: 1.7rem solid transparent;
+	}
+
+	.primary-nav[data-visible="true"] { display: flex;}
+
+	.primary-nav__item {
+		color: var(--clr-neutral-700);
+		opacity: 0.5;
+	}
+
+	
+	.primary-nav__item.accent {
+		background-color: var(--clr-yellow-400);
+		opacity: 1;
+		
+		margin-inline-start: 0;
+	}
+
+	.primary-nav__item:is(
+		:hover, :focus-within
+	) { opacity: 1;	}
+
+	.primary-nav__item.accent:is(
+		:hover, :focus-within
+	) { background-color: hsl(51, 100%, 70%);}
+	
+	.mobile-nav-toggle {
+		display: block;
+
+		position: absolute;
+		z-index: 9999;
+		top: var(--size-700); right: var(--size-600);
+
+		background-image: url("./images/icon-hamburger.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		background-color: transparent;
+
+		width: 2rem;
+		aspect-ratio: 1;
+		
+		border: none;
+
+		cursor: pointer;
+	}
+}
 
 
 /* About Section*/
@@ -133,13 +254,12 @@ p[data-opacity="600"] { opacity: 0.6; }
 }
 
 .btn::before {
-	content: " ";
+	content: "";
 
 	display: block;
 	
 	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
-	inset: .8125rem -.3rem 0 -.3rem;
+	inset: .8125rem -.1rem 0 -.3rem;
 	
 	background: var(--btn-clr, var(--clr-neutral-500));
 	z-index: -1;
@@ -234,6 +354,8 @@ p[data-opacity="600"] { opacity: 0.6; }
 	.testimonials-wrapper {	grid-template-columns: repeat(3, 1fr); }
 }
 
+
+
 /* Gallery Section */
 .gallery-imgs {
 	display: grid;
@@ -307,9 +429,9 @@ p[data-opacity="600"] { opacity: 0.6; }
 	border: 0;
 }
 
-.row {
+.flex {
 	display: flex;
-	gap: var(--row-gap, 2rem);
+	gap: var(--flex-gap, 2rem);
 }
 
 .grid {
@@ -353,7 +475,7 @@ p[data-opacity="600"] { opacity: 0.6; }
 .fs-900 { font-size: var(--fs-900); }
 
 .fs-primary-heading { 
-	font-size: var(--fs-800);
+	font-size: clamp(2.5rem, 5vw, 5rem);
 	line-height: 1.1;
 	letter-spacing: .5rem;
 }
@@ -393,7 +515,9 @@ p[data-opacity="600"] { opacity: 0.6; }
 
 .padding-block-500 { padding-block: var(--size-500); }
 .padding-block-600 { padding-block: var(--size-600); }
+.padding-block-700 { padding-block: var(--size-700); }
 .padding-block-800 { padding-block: var(--size-800); }
+.padding-block-900 { padding-block: var(--size-900); }
 
 .mx-auto { margin-inline: auto; }
 @media(max-width: 60em) { .mx-auto-sm-only { margin-inline: auto;} }
