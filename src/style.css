@@ -329,9 +329,9 @@ p[data-width="narrow"] { max-width: 42ch; }
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
-	.service { background-image: url('./images/desktop/image-graphic-design.jpg'); }
+	.service { background-image: url('/images/desktop/image-graphic-design.jpg'); }
 	
-	.service:last-of-type {	background-image: url('./images/desktop/image-photography.jpg'); }
+	.service:last-of-type {	background-image: url('/images/desktop/image-photography.jpg'); }
 }
 
 .service-text { width: 70%; }
