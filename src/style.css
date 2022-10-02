@@ -113,14 +113,14 @@ p[data-width="narrow"] { max-width: 42ch; }
 
 /* Header */
 .primary-header {
-	background-image: url('./images/image-header.jpg');
+	background-image: url('/images/image-header.jpg');
 	background-position: center bottom;
 	background-size: cover;
 }
 
 @media(min-width: 45em) {
 	.primary-header {
-		background-image: url('./images/desktop/image-header.jpg');
+		background-image: url('/images/desktop/image-header.jpg');
 	}
 }
 .nav-wrapper {
@@ -217,7 +217,7 @@ p[data-width="narrow"] { max-width: 42ch; }
 		z-index: 9999;
 		top: var(--size-700); right: var(--size-600);
 
-		background-image: url("./images/icon-hamburger.svg");
+		background-image: url("/images/icon-hamburger.svg");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
@@ -310,7 +310,7 @@ p[data-width="narrow"] { max-width: 42ch; }
 	align-items: end;
 
 	background-color: hsl(165, 48%, 75%);
-	background-image: url('./images/mobile/image-graphic-design.jpg');
+	background-image: url('/images/mobile/image-graphic-design.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -321,7 +321,7 @@ p[data-width="narrow"] { max-width: 42ch; }
 
 .service:last-of-type {
 	background-color: hsl(197, 99%, 68%);
-	background-image: url('./images/mobile/image-photography.jpg');
+	background-image: url('/images/mobile/image-photography.jpg');
 }
 
 @media (min-width: 46.875em) {
