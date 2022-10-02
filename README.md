@@ -1,9 +1,9 @@
 <h1 align="center">☀️ Sunnyside Agency Landing Page</h1>
 <p align="center">
-  We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+  Responsive landing page proposed by <a href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef">Front End Mentor</a>.
 </p>
 <h2 align="center">
-  🚧  In construction...  🚧
+  <img src="./.resource/header-img.png" />
 </h2>
 <p align="center">
   <a href="#tech">Technologies</a> •
@@ -28,8 +28,14 @@
 
 <h2 id="objective">🎯 Objective </h2>
 
-<p>This project was made following Front End Mentor's design, you can see the challenge by <a href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef">clicking here.</a>
-<p>Every now and them you'll be asked to create an responsive landing page from a design, so this is the core objective of this project, not design a page instead build one.</p>
+<p>This project was proposed by Front End Mentor, you can check the challenge by <a href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef">clicking here</a>. I put in practice the following subjects:</p>
+<ul>
+	<li>Semantic HTML5 markup</li>
+	<li>CSS custom properties</li>
+	<li>CSS Grid</li>
+	<li>Mobile-first workflow</li>
+</ul>
+<p>I have plans to add more features in this project as I progress with my studies. Like scroll animations.</p>
 
 <em>User should be able to:</em>
 <ul>
